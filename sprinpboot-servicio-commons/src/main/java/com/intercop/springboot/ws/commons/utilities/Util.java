@@ -11,9 +11,7 @@ import java.util.List;
 
 public class Util {
 	public static Double promedio(List<Integer> v) {
-		// AVERAGE -- Solution 1
 		return v.stream().mapToInt(i -> i).average().getAsDouble();
-
 	}
 
 	public static Double desviacion(List<Integer> v) {
