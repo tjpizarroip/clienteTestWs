@@ -23,14 +23,14 @@ Para mayor informacion consultar: http://clienteretoaws-env.jgirjcwizt.us-east-2
 1. El proyecto ya cuenta con el conector H2 database, para utilizarlo solo se tiene de renombrar el archivo import_bkp.sql a import.sql
 2. Adicional comentar las siguiente propiedades en el archivo application.properties:
 
-		spring.datasource.url=jdbc:mysql://database-reto.cggzatvslfsy.us-east-2.rds.amazonaws.com:3306/db_reto<br />
-		spring.datasource.username=tjpizarroip<br />
-		spring.datasource.password=kyokasuigetsu<br />
-		spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver<br />
-		spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect<br />
-		#spring.jpa.hibernate.ddl-auto=create<br />
-		spring.jpa.hibernate.ddl-auto=update<br />
-		logging.level.org.hibernate.SQL=debug<br />
+		spring.datasource.url=jdbc:mysql://database-reto.cggzatvslfsy.us-east-2.rds.amazonaws.com:3306/db_reto
+		spring.datasource.username=tjpizarroip
+		spring.datasource.password=kyokasuigetsu
+		spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+		spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+		#spring.jpa.hibernate.ddl-auto=create
+		spring.jpa.hibernate.ddl-auto=update
+		logging.level.org.hibernate.SQL=debug
 
 ### Configuración de Base de Datos ###
 
@@ -39,10 +39,10 @@ La base de datos esta creada el AWS por RDS, caso de perdida de conexion con el 
 
 Cambiando las siguiente propiedades en el rchivo application.properties
 
-		spring.datasource.url=jdbc:mysql://localhost:3306/db_reto<br />
-		spring.datasource.username=root<br />
-		spring.datasource.password=123456<br />
-		spring.jpa.hibernate.ddl-auto=create<br />
+		spring.datasource.url=jdbc:mysql://localhost:3306/db_reto
+		spring.datasource.username=root
+		spring.datasource.password=123456
+		spring.jpa.hibernate.ddl-auto=create
 
 * Cabe resaltar es necesario crear la BD db_reto
 
