@@ -50,14 +50,14 @@ Cambiando las siguiente propiedades en el rchivo application.properties
 
 ### Test - Pruebas ###
 
-Se añadio al repositorio el archivo [Reto-Cliente.postman_collection.json](https://github.com/tjpizarroip/clienteTestWs/blob/master/Reto-Cliente.postman_collection.json ), que contiene la collecion de postman para ser importado con los endpoint solicitados.
+Se añadio al repositorio el archivo [Reto-Cliente.postman_collection.json](https://github.com/tjpizarroip/clienteTestWs/blob/master/Reto-Cliente.postman_collection.json ), que contiene la collecion de postman para ser importado con los endpoint solicitados tanto en ambiente local como en aws.
 
 
 ### Administrador del Repositorio ###
 
 Javier Pizarro Ipanaque
 
-* tjpizarroip91@gmail.com
+* correo: tjpizarroip91@gmail.com
 * Celular: 966125828
 
 
