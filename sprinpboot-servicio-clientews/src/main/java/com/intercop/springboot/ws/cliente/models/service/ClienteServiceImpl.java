@@ -44,7 +44,6 @@ public class ClienteServiceImpl implements IClienteService {
 			Date now = new Date();
 			do {
 				fechaPosibleFallecimiento = Util.fechaPosibleFallecimiento(cliente.getFechaNacimiento());
-				System.out.println("Fecha Nacimiento: "+Util.formatFecha(cliente.getFechaNacimiento(), FORMATO_FECHA) + " - "+Util.formatFecha(fechaPosibleFallecimiento, FORMATO_FECHA));
 			}while(now.compareTo(fechaPosibleFallecimiento) > 0);			
 			
 			cliente.setFechaPosibleMuerte(Util.formatFecha(Util.fechaPosibleFallecimiento(cliente.getFechaNacimiento()), FORMATO_FECHA));
