@@ -20,8 +20,9 @@ Para mayor informacion consultar: http://clienteretoaws-env.jgirjcwizt.us-east-2
 	
 ### Instalación de Ambiente local ###
 
-1. El proyecto ya cuenta con el conector H2 database, para utilizarlo solo se tiene de renombrar el archivo import_bkp.sql a import.sql,
-2. Adicional comentar las siguiente propiedades en el archivo application.properties:<br />
+1. El proyecto ya cuenta con el conector H2 database, para utilizarlo solo se tiene de renombrar el archivo import_bkp.sql a import.sql
+2. Adicional comentar las siguiente propiedades en el archivo application.properties:
+
 		spring.datasource.url=jdbc:mysql://database-reto.cggzatvslfsy.us-east-2.rds.amazonaws.com:3306/db_reto<br />
 		spring.datasource.username=tjpizarroip<br />
 		spring.datasource.password=kyokasuigetsu<br />
@@ -29,7 +30,6 @@ Para mayor informacion consultar: http://clienteretoaws-env.jgirjcwizt.us-east-2
 		spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect<br />
 		#spring.jpa.hibernate.ddl-auto=create<br />
 		spring.jpa.hibernate.ddl-auto=update<br />
-
 		logging.level.org.hibernate.SQL=debug<br />
 
 ### Configuración de Base de Datos ###
