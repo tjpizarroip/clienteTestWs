@@ -35,7 +35,8 @@ Para mayor informacion consultar: http://clienteretoaws-env.jgirjcwizt.us-east-2
 ### Configuración de Base de Datos ###
 
 La base de datos esta creada el AWS por RDS, caso de perdida de conexion con el ambiente se puede utilizar la soguiente linea en docker para correr un contenedor con mysql:
-	docker run --name=mysql1 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% mysql/mysql-server:5.7
+
+		docker run --name=mysql1 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% mysql/mysql-server:5.7
 
 Cambiando las siguiente propiedades en el rchivo application.properties
 
