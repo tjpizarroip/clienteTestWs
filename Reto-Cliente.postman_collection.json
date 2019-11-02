@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "638293c4-3171-4102-8ea1-923b15554ac9",
+		"name": "Reto-Cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reto Cliente",
+			"item": [
+				{
+					"name": "local",
+					"item": [
+						{
+							"name": "listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listClientesPosibleMuerte",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/listClientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"listClientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "kpideclientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/kpideclientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"kpideclientes"
+									]
+								},
+								"description": "Retorna el promedio y la desviacion"
+							},
+							"response": []
+						},
+						{
+							"name": "swagger-api",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/v2/api-docs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"v2",
+										"api-docs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crearCliente",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"javier\",\r\n    \"apellido\": \"ipanaque\",\r\n    \"edad\": 31,\r\n    \"fechaNacimiento\": \"1988-04-19\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9001/creacliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"creacliente"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AWS",
+					"item": [
+						{
+							"name": "listar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://clienteretoaws-env.jgirjcwizt.us-east-2.elasticbeanstalk.com:9001/listar",
+									"protocol": "http",
+									"host": [
+										"clienteretoaws-env",
+										"jgirjcwizt",
+										"us-east-2",
+										"elasticbeanstalk",
+										"com"
+									],
+									"port": "9001",
+									"path": [
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listClientesPosibleMuerte",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://clienteretoaws-env.jgirjcwizt.us-east-2.elasticbeanstalk.com:9001/listClientes",
+									"protocol": "http",
+									"host": [
+										"clienteretoaws-env",
+										"jgirjcwizt",
+										"us-east-2",
+										"elasticbeanstalk",
+										"com"
+									],
+									"port": "9001",
+									"path": [
+										"listClientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "kpideclientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://clienteretoaws-env.jgirjcwizt.us-east-2.elasticbeanstalk.com:9001/kpideclientes",
+									"protocol": "http",
+									"host": [
+										"clienteretoaws-env",
+										"jgirjcwizt",
+										"us-east-2",
+										"elasticbeanstalk",
+										"com"
+									],
+									"port": "9001",
+									"path": [
+										"kpideclientes"
+									]
+								},
+								"description": "Retorna el promedio y la desviacion"
+							},
+							"response": []
+						},
+						{
+							"name": "swagger-api",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://clienteretoaws-env.jgirjcwizt.us-east-2.elasticbeanstalk.com:9001/v2/api-docs",
+									"protocol": "http",
+									"host": [
+										"clienteretoaws-env",
+										"jgirjcwizt",
+										"us-east-2",
+										"elasticbeanstalk",
+										"com"
+									],
+									"port": "9001",
+									"path": [
+										"v2",
+										"api-docs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crearCliente",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"javier\",\r\n    \"apellido\": \"pizarro\",\r\n    \"edad\": 31,\r\n    \"fechaNacimiento\": \"1988-04-19\"\r\n}"
+								},
+								"url": {
+									"raw": "http://clienteretoaws-env.jgirjcwizt.us-east-2.elasticbeanstalk.com:9001/creacliente",
+									"protocol": "http",
+									"host": [
+										"clienteretoaws-env",
+										"jgirjcwizt",
+										"us-east-2",
+										"elasticbeanstalk",
+										"com"
+									],
+									"port": "9001",
+									"path": [
+										"creacliente"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
