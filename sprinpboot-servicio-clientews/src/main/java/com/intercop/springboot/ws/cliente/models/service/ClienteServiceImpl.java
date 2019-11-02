@@ -1,5 +1,6 @@
 package com.intercop.springboot.ws.cliente.models.service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class ClienteServiceImpl implements IClienteService {
 	@Autowired
 	private ClienteDao clienteDao;
 	
-	private static final String FORMATO_FECHA = "yyyy-mm-dd";
+	private static final String FORMATO_FECHA = "yyyy-MM-dd";
 
 	@Override
 	@Transactional(readOnly = true)
@@ -39,6 +40,13 @@ public class ClienteServiceImpl implements IClienteService {
 	public List<Cliente> listClienteConFechaMuerte() {
 		List<Cliente> clientes = (List<Cliente>) clienteDao.findAll();
 		for (Cliente cliente : clientes) {
+			Date fechaPosibleFallecimiento = new Date();
+			Date now = new Date();
+			do {
+				fechaPosibleFallecimiento = Util.fechaPosibleFallecimiento(cliente.getFechaNacimiento());
+				System.out.println("Fecha Nacimiento: "+Util.formatFecha(cliente.getFechaNacimiento(), FORMATO_FECHA) + " - "+Util.formatFecha(fechaPosibleFallecimiento, FORMATO_FECHA));
+			}while(now.compareTo(fechaPosibleFallecimiento) > 0);			
+			
 			cliente.setFechaPosibleMuerte(Util.formatFecha(Util.fechaPosibleFallecimiento(cliente.getFechaNacimiento()), FORMATO_FECHA));
 		}
 		return clientes;

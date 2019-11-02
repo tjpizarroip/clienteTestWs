@@ -34,12 +34,13 @@ public class Util {
 				.between(aux.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), LocalDate.now())
 				.getYears();
 		Integer aniosVida = 0;
-		if (15 >= edad) {
+		if (15 <= edad) {
 			aniosVida = numeroAleatorioEntre(60, 71);
 		} else {
 			aniosVida = numeroAleatorioEntre(60 - edad, 71 - edad);
 		}
 		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(aux);
 		calendar.add(Calendar.YEAR, aniosVida);
 		
 		return calendar.getTime();
