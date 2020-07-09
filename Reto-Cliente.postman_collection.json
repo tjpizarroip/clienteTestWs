@@ -12,7 +12,194 @@
 					"name": "local",
 					"item": [
 						{
-							"name": "listar",
+							"name": "security-tokens-zuul-user",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "frontendapp",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "javier",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/security/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"security",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "security-tokens-zuul-admin",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "frontendapp",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/security/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"security",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "security-refresh-tokens-zuul-user",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "frontendapp",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "refresh_token",
+											"type": "text"
+										},
+										{
+											"key": "refresh_token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqYXZpZXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJQaXphcnJvIiwiY29ycmVvIjoidGpwaXphcnJvaXA5MUBnbWFpbC5jb20iLCJhdGkiOiIwZTEwNTAwYi1lN2VkLTQxYjYtYWU0ZS1hZTBkMzM5MDlmODgiLCJleHAiOjE1OTQzMzM0NjIsIm5vbWJyZSI6IkphdmllciIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiI4MGI0Zjg3ZS01OTM3LTRiMjctYTdiOS1hMmU3MGFmZDE1ODYiLCJjbGllbnRfaWQiOiJmcm9udGVuZGFwcCJ9.Xp5JeTJr72qs7brn4Onzg6N6XCqfEn7xVC5mCsh2YXM",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/security/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"security",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listar-cliente",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -25,6 +212,67 @@
 									"port": "9001",
 									"path": [
 										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listar-usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9002/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listar-zuul-cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/cliente/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"cliente",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "listar-zuul-usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/usuarios/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"usuarios",
+										"usuario"
 									]
 								}
 							},
@@ -50,6 +298,37 @@
 							"response": []
 						},
 						{
+							"name": "listClientesPosibleMuerte-zuul",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqYXZpZXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJQaXphcnJvIiwiY29ycmVvIjoidGpwaXphcnJvaXA5MUBnbWFpbC5jb20iLCJleHAiOjE1OTQzMzM5ODIsIm5vbWJyZSI6IkphdmllciIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiI2YzhkZDU5NS1jZGY0LTRjNjAtYWRhNC03OTliNjJiZWQzYzQiLCJjbGllbnRfaWQiOiJmcm9udGVuZGFwcCJ9.3ravtsvQGDKRQ055xYPWY1qQPxWN9lxs4n4P26I1yT8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/cliente/listClientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"cliente",
+										"listClientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "kpideclientes",
 							"request": {
 								"method": "GET",
@@ -62,6 +341,38 @@
 									],
 									"port": "9001",
 									"path": [
+										"kpideclientes"
+									]
+								},
+								"description": "Retorna el promedio y la desviacion"
+							},
+							"response": []
+						},
+						{
+							"name": "kpideclientes-zuul",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJqYXZpZXIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJQaXphcnJvIiwiY29ycmVvIjoidGpwaXphcnJvaXA5MUBnbWFpbC5jb20iLCJleHAiOjE1OTQzMzM0NjIsIm5vbWJyZSI6IkphdmllciIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIwZTEwNTAwYi1lN2VkLTQxYjYtYWU0ZS1hZTBkMzM5MDlmODgiLCJjbGllbnRfaWQiOiJmcm9udGVuZGFwcCJ9.udfCVE039FhHd-Y6jMd7bHx0LLnggEMAb3LsIQIEVss",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9003/api/cliente/kpideclientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"cliente",
 										"kpideclientes"
 									]
 								},
@@ -112,6 +423,47 @@
 									],
 									"port": "9001",
 									"path": [
+										"creacliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crearCliente-zuul",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6IklwYW5hcXVlIiwiY29ycmVvIjoidGpwaXphcnJvaXA5MUBob3RtYWlsLmVzIiwiZXhwIjoxNTk0MzM0NDYwLCJub21icmUiOiJKb3NlIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiIxNjNjYjE2NS1kM2ZiLTQ4ZTUtYmE1Yy1iOGZkMWU3M2MzZGYiLCJjbGllbnRfaWQiOiJmcm9udGVuZGFwcCJ9.__GwZmgdy_emotKV60z9_pv-TcEJkXepEZsj4WvaPns",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"jose\",\r\n    \"apellido\": \"pizarro\",\r\n    \"edad\": 29,\r\n    \"fechaNacimiento\": \"1991-07-19\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9003/api/cliente/creacliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"api",
+										"cliente",
 										"creacliente"
 									]
 								}
